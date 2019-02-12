@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.53" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Minimal Debian Installation Guide &middot; ghost in the computer</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://szvsk.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://szvsk.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://szvsk.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://szvsk.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://szvsk.github.io/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://szvsk.github.io/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="ghost in the computer" />
+
+  
+</head>
+
+  <body class="theme-base-00 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://szvsk.github.io/"><h1>ghost in the computer</h1></a>
+      <p class="lead">
+       (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧ 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://szvsk.github.io/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2019. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Minimal Debian Installation Guide</h1>
+  <time datetime=2019-02-12T13:15:09&#43;0500 class="post-date">Tue, Feb 12, 2019</time>
+  <p>This guide was copy-pasted from ru-lang part of web, and placed here just like note for myself. Original source can be found <a href="https://sites.google.com/site/amdamdsoft/Home/debian-i3-sid">here</a>.</p>
+
+<h2 id="install-system-from-expert-mode">Install system from Expert Mode.</h2>
+
+<p>Required:</p>
+
+<ul>
+<li>Make root password,</li>
+<li>Accept use of non-free software,</li>
+<li>Install system utilites only.</li>
+</ul>
+
+<p>After installation there will be black screen with login-password request.</p>
+
+<h2 id="sudo-install">Sudo Install</h2>
+
+<pre><code># login as super user
+su
+# install system administration program
+apt install sudo
+# add new user to sudo group
+adduser username sudo
+# reboot
+reboot
+</code></pre>
+
+<h2 id="packages-install">Packages Install</h2>
+
+<pre><code class="language-bash"># Update list of packages
+sudo apt update
+# Install i3 windows manager
+sudo apt install i3 menu
+# Install graphical interface
+sudo apt install xorg mesa-utils mesa-vulkan-drivers
+# Install AMD/ATI firmware
+sudo apt install firmware-amd-graphics
+# Install NVIDIA firmware
+sudo apt install nvidia-driver
+# Install sound utilities
+sudo apt install alsa-utils
+# Initialize sound
+sudo alsactl init
+# Install WiFi utilities
+sudo apt install wireless-tools wpasupplicant iw
+# Install Midnight Commander
+sudo apt install mc
+# Install archive managers
+sudo apt install p7zip-full unzip unrar-free
+# Install web browser dillo
+sudo apt install dillo
+# Install feh image viewer
+sudo apt install feh
+# Install pdf viewer
+sudo apt install zathura
+# Install torrent client
+sudo apt install transmission
+# Install movie/audio player
+sudo apt install mpv
+# Install graphic informer
+sudo apt install neofetch
+# Install network utilities
+sudo apt install net-tools hping3 iftop nmap vnstat ifstat
+# Install system utilities
+sudo apt install sysstat iotop atop powertop smartmontools
+# Install compiler tools
+sudo apt install build-essential
+# Install file recovery tool
+sudo apt install scalpel
+# Install screenshot tool
+sudo apt install scrot
+# Start graphic mode
+startx
+</code></pre>
+
+<h2 id="automatisation-of-startx">Automatisation of startx</h2>
+
+<pre><code class="language-bash">$ nano ~/.profile
+# Add to the end of file
+[[ -z $DISPLAY &amp;&amp; $XDG_VTNR -eq 1 ]] &amp;&amp; exec startx
+</code></pre>
+
+<h2 id="luakit-website-https-luakit-github-io">Luakit (<a href="https://luakit.github.io/">website</a>).</h2>
+
+<p>Web browser with vim-like keybindings.</p>
+
+<pre><code class="language-bash">sudo apt install git
+sudo apt install build-essential
+sudo apt install gtk+-3.0
+sudo apt install lua5.1
+sudo apt install lua-filesystem
+sudo apt install webkit2gtk-4.0
+sudo apt install sqlite3
+sudo apt install libluajit-5.1-dev
+sudo apt install libsqlite3-dev
+git clone git://github.com/luakit/luakit
+cd luakit
+# Compiling
+make
+# Install
+sudo make install
+# Uninstall
+sudo make uninstall
+</code></pre>
+
+<p>Further x.org configuration can be found <a href="https://lorwiki.org.ru/wiki/X-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80">here</a> (!russian content).</p>
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>
