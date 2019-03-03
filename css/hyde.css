@@ -32,7 +32,7 @@
  */
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 @media (min-width: 48em) {
   html {
@@ -188,7 +188,7 @@ a.sidebar-nav-item:focus {
 .theme-base-00 .sidebar-about h1 {
   color: #202020;
   margin-top: 0;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 3.25rem;
 }
 .theme-base-00 .content a,
