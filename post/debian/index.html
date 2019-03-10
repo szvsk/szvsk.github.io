@@ -1,55 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.53" />
-
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Minimal Debian Installation Guide &middot; ghost in the computer</title>
+  <title>Minimal Debian Installation Guide &mdash; ghost in the computer</title>
 
-  
   <link type="text/css" rel="stylesheet" href="https://szvsk.github.io/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://szvsk.github.io/css/poole.css">
   <link type="text/css" rel="stylesheet" href="https://szvsk.github.io/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://szvsk.github.io/css/hyde.css">
+  <link type="text/css" rel="stylesheet" href="https://szvsk.github.io/css/one.css">
 
   
   
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:700|PT+Sans:400,400i,700&amp;subset=cyrillic" rel="stylesheet"> 
 
-  
   <link href="" rel="alternate" type="application/rss+xml" title="ghost in the computer" />
 
   
 </head>
 
-  <body class="theme-base-00 ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://szvsk.github.io/"><h1>ghost in the computer</h1></a>
-      <p class="lead">
-       (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧ 
-      </p>
-    </div>
+  <body class=" ">
+  <header>
+  <nav>
+    <a href="https://szvsk.github.io/" class="logo"><h3>ghost in the computer</h3></a>
+    
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://szvsk.github.io/">Home</a> </li>
-        
-      </ul>
-    </nav>
-
-    <p>&copy; 2019. All rights reserved. </p>
-  </div>
-</aside>
-
+  
+  </nav>
+</header>
     <main class="content container">
     <div class="post">
   <h1>Minimal Debian Installation Guide</h1>
-  <time datetime=2019-02-12T13:15:09&#43;0500 class="post-date">Tue, Feb 12, 2019</time>
+  <time datetime=2019-02-12T13:15:09&#43;0500 class="post-date">February 12, 2019</time>
   <p>This guide was copy-pasted from ru-lang part of web, and placed here just like note for myself. Original source can be found <a href="https://sites.google.com/site/amdamdsoft/Home/debian-i3-sid">here</a>.</p>
 
 <h2 id="install-system-from-expert-mode">Install system from Expert Mode.</h2>
@@ -66,100 +48,97 @@
 
 <h2 id="install-sudo">Install sudo</h2>
 
-<pre><code># login as super user
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># login as super user</span>
 su
-# install system administration program
+<span style="color:#75715e"># install system administration program</span>
 apt install sudo
-# add new user to sudo group
+<span style="color:#75715e"># add new user to sudo group</span>
 adduser username sudo
-# reboot
-reboot
-</code></pre>
+<span style="color:#75715e"># reboot</span>
+reboot</code></pre></div>
 
 <h2 id="install-packages">Install packages</h2>
 
-<pre><code class="language-bash"># Update list of packages
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Update list of packages</span>
 sudo apt update
-# Install i3 windows manager
+<span style="color:#75715e"># Install i3 windows manager</span>
 sudo apt install i3 menu
-# Install graphical interface
+<span style="color:#75715e"># Install graphical interface</span>
 sudo apt install xorg mesa-utils mesa-vulkan-drivers
-# Install AMD/ATI firmware
+<span style="color:#75715e"># Install AMD/ATI firmware</span>
 sudo apt install firmware-amd-graphics
-# Install NVIDIA firmware
+<span style="color:#75715e"># Install NVIDIA firmware</span>
 sudo apt install nvidia-driver
-# Install sound utilities
+<span style="color:#75715e"># Install sound utilities</span>
 sudo apt install alsa-utils
-# Initialize sound
+<span style="color:#75715e"># Initialize sound</span>
 sudo alsactl init
-# Install WiFi utilities
+<span style="color:#75715e"># Install WiFi utilities</span>
 sudo apt install wireless-tools wpasupplicant iw
-# Install Midnight Commander
+<span style="color:#75715e"># Install Midnight Commander</span>
 sudo apt install mc
-# Install archive managers
+<span style="color:#75715e"># Install archive managers</span>
 sudo apt install p7zip-full unzip unrar-free
-# Install web browser dillo
+<span style="color:#75715e"># Install web browser dillo</span>
 sudo apt install dillo
-# Install feh image viewer
+<span style="color:#75715e"># Install feh image viewer</span>
 sudo apt install feh
-# Install pdf viewer
+<span style="color:#75715e"># Install pdf viewer</span>
 sudo apt install zathura
-# Install torrent client
+<span style="color:#75715e"># Install torrent client</span>
 sudo apt install transmission
-# Install movie/audio player
+<span style="color:#75715e"># Install movie/audio player</span>
 sudo apt install mpv
-# Install graphic informer
+<span style="color:#75715e"># Install graphic informer</span>
 sudo apt install neofetch
-# Install network utilities
+<span style="color:#75715e"># Install network utilities</span>
 sudo apt install net-tools hping3 iftop nmap vnstat ifstat
-# Install system utilities
+<span style="color:#75715e"># Install system utilities</span>
 sudo apt install sysstat iotop atop powertop smartmontools
-# Install compiler tools
+<span style="color:#75715e"># Install compiler tools</span>
 sudo apt install build-essential
-# Install file recovery tool
+<span style="color:#75715e"># Install file recovery tool</span>
 sudo apt install scalpel
-# Install screenshot tool
+<span style="color:#75715e"># Install screenshot tool</span>
 sudo apt install scrot
-# Start graphic mode
-startx
-</code></pre>
+<span style="color:#75715e"># Start graphic mode</span>
+startx</code></pre></div>
 
 <h2 id="automatisation-of-startx">Automatisation of startx</h2>
 
-<pre><code class="language-bash">$ nano ~/.profile
-# Add at the end of file
-[[ -z $DISPLAY &amp;&amp; $XDG_VTNR -eq 1 ]] &amp;&amp; exec startx
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nano ~/.profile
+<span style="color:#75715e"># Add this line to the end of file</span>
+<span style="color:#f92672">[[</span> -z $DISPLAY <span style="color:#f92672">&amp;&amp;</span> $XDG_VTNR -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]]</span> <span style="color:#f92672">&amp;&amp;</span> exec startx</code></pre></div>
 
 <h2 id="install-luakit-website-https-luakit-github-io">Install Luakit (<a href="https://luakit.github.io/">website</a>).</h2>
 
 <p>Web browser with vim-like keybindings.</p>
 
-<pre><code class="language-bash">sudo apt install git
-sudo apt install build-essential
-sudo apt install gtk+-3.0
-sudo apt install lua5.1
-sudo apt install lua-filesystem
-sudo apt install webkit2gtk-4.0
-sudo apt install sqlite3
-sudo apt install libluajit-5.1-dev
-sudo apt install libsqlite3-dev
-git clone git://github.com/luakit/luakit
-cd luakit
-# Compiling
-make
-# Install
-sudo make install
-# Uninstall
-sudo make uninstall
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># First of all, install all dependencies</span>
+$ sudo apt install git
+$ sudo apt install build-essential
+$ sudo apt install gtk+-3.0
+$ sudo apt install lua5.1
+$ sudo apt install lua-filesystem
+$ sudo apt install webkit2gtk-4.0
+$ sudo apt install sqlite3
+$ sudo apt install libluajit-5.1-dev
+$ sudo apt install libsqlite3-dev
+<span style="color:#75715e"># Download latest version of luakit</span>
+$ git clone git://github.com/luakit/luakit
+<span style="color:#75715e"># Then we need go inside downloaded directory and compile program</span>
+$ cd luakit
+$ make
+<span style="color:#75715e"># Then install program</span>
+$ sudo make install
+<span style="color:#75715e"># In case you need to uninstall luakit, it possible with next command</span>
+$ sudo make uninstall</code></pre></div>
 
-<p>Further x.org configuration can be found <a href="https://lorwiki.org.ru/wiki/X-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80">here</a> (!russian content).</p>
+<p>Further x.org configuration can be found <a href="https://lorwiki.org.ru/wiki/X-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80">here</a>, but it written in russian.</p>
 </div>
 
 
     </main>
 
-    
   </body>
 </html>
