@@ -5,7 +5,7 @@
 }
 
 html {
-  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-family: "opensansr";
 }
 @media (min-width: 48em) {
   html {
@@ -30,6 +30,7 @@ body {
 
 /* Site header */
 header {
+  font-family: "roboto";
   display: inline-block;
   margin: 2rem 4rem;
   text-transform: uppercase;
@@ -50,6 +51,7 @@ h1 a {
 
 /* Headers */
 h1, h2, h3, h4, h5, h6 {
+  font-family: "roboto";
   margin-bottom: .5rem;
   line-height: 1.25;
   color: #313131;
@@ -96,7 +98,8 @@ dd {
 
 /* Code */
 code, pre {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "firacoder";
+  font-variant-ligatures: normal;
   font-size: 0.9rem;
   line-height: 1.4;
 }
