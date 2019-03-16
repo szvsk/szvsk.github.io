@@ -1,47 +1,23 @@
 /* Roboto */
 @font-face {
-    font-family: "roboto";
-    src: url("../fonts/Roboto-Regular.ttf") format(truetype);
+    font-family: "Roboto-Regular";
+    src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 /* Open Sans */
 @font-face {
-    font-family: "oepnsansi";
-    src: url("../fonts/OpenSans-Italic.ttf") format(truetype);
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: "opensansr";
-    src: url("../fonts/OpenSans-Regular.ttf") format(truetype);
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: "opensanssb";
-    src: url("../fonts/OpenSans-Semibold.ttf") format(truetype);
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: "opensanssbi";
-    src: url("../fonts/OpenSans-Italic.ttf") format(truetype);
+    font-family: "OpenSans-Regular";
+    src: url("../fonts/OpenSans-Regular-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 /* Fira Code */
 @font-face {
-    font-family: "firacodeb";
-    src: url("../fonts/FiraCode-Bold.ttf") format(truetype);
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: "firacoder";
-    src: url("../fonts/FiraCode-Regular.ttf") format(truetype);
+    font-family: "FiraCode-Regular";
+    src: url("../fonts/FiraCode-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
