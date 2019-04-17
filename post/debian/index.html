@@ -47,64 +47,65 @@
 <h2 id="install-sudo">Install sudo</h2>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># login as super user</span>
-su
+$ su
 <span style="color:#75715e"># install system administration program</span>
-apt install sudo
+$ apt install sudo
 <span style="color:#75715e"># add new user to sudo group</span>
-adduser username sudo
+$ adduser username sudo
 <span style="color:#75715e"># reboot</span>
-reboot</code></pre></div>
+$ reboot</code></pre></div>
 
 <h2 id="install-packages">Install packages</h2>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Update list of packages</span>
-sudo apt update
+$ sudo apt update
 <span style="color:#75715e"># Install i3 windows manager</span>
-sudo apt install i3 menu
+$ sudo apt install i3 menu
 <span style="color:#75715e"># Install graphical interface</span>
-sudo apt install xorg mesa-utils mesa-vulkan-drivers
+$ sudo apt install xorg mesa-utils mesa-vulkan-drivers
 <span style="color:#75715e"># Install AMD/ATI firmware</span>
-sudo apt install firmware-amd-graphics
+$ sudo apt install firmware-amd-graphics
 <span style="color:#75715e"># Install NVIDIA firmware</span>
-sudo apt install nvidia-driver
+$ sudo apt install nvidia-driver
 <span style="color:#75715e"># Install sound utilities</span>
-sudo apt install alsa-utils
+$ sudo apt install alsa-utils
 <span style="color:#75715e"># Initialize sound</span>
-sudo alsactl init
+$ sudo alsactl init
 <span style="color:#75715e"># Install WiFi utilities</span>
-sudo apt install wireless-tools wpasupplicant iw
+$ sudo apt install wireless-tools wpasupplicant iw
 <span style="color:#75715e"># Install Midnight Commander</span>
-sudo apt install mc
+$ sudo apt install mc
 <span style="color:#75715e"># Install archive managers</span>
-sudo apt install p7zip-full unzip unrar-free
+$ sudo apt install p7zip-full unzip unrar-free
 <span style="color:#75715e"># Install web browser dillo</span>
-sudo apt install dillo
+$ sudo apt install dillo
 <span style="color:#75715e"># Install feh image viewer</span>
-sudo apt install feh
+$ sudo apt install feh
 <span style="color:#75715e"># Install pdf viewer</span>
-sudo apt install zathura
+$ sudo apt install zathura
 <span style="color:#75715e"># Install torrent client</span>
-sudo apt install transmission
+$ sudo apt install transmission
 <span style="color:#75715e"># Install movie/audio player</span>
-sudo apt install mpv
+$ sudo apt install mpv
 <span style="color:#75715e"># Install graphic informer</span>
-sudo apt install neofetch
+$ sudo apt install neofetch
 <span style="color:#75715e"># Install network utilities</span>
-sudo apt install net-tools hping3 iftop nmap vnstat ifstat
+$ sudo apt install net-tools hping3 iftop nmap vnstat ifstat
 <span style="color:#75715e"># Install system utilities</span>
-sudo apt install sysstat iotop atop powertop smartmontools
+$ sudo apt install sysstat iotop atop powertop smartmontools
 <span style="color:#75715e"># Install compiler tools</span>
-sudo apt install build-essential
+$ sudo apt install build-essential
 <span style="color:#75715e"># Install file recovery tool</span>
-sudo apt install scalpel
+$ sudo apt install scalpel
 <span style="color:#75715e"># Install screenshot tool</span>
-sudo apt install scrot
+$ sudo apt install scrot
 <span style="color:#75715e"># Start graphic mode</span>
-startx</code></pre></div>
+$ startx</code></pre></div>
 
 <h2 id="automatisation-of-startx">Automatisation of startx</h2>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nano ~/.profile
+
 <span style="color:#75715e"># Add this line to the end of file</span>
 <span style="color:#f92672">[[</span> -z $DISPLAY <span style="color:#f92672">&amp;&amp;</span> $XDG_VTNR -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]]</span> <span style="color:#f92672">&amp;&amp;</span> exec startx</code></pre></div>
 
