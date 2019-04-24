@@ -126,7 +126,8 @@ pre {
   padding: 1rem;
 }
 pre code {
-  padding: 0;
+  padding: auto;
+  white-space: pre-wrap;
 }
 
 .logo {
