@@ -6,20 +6,18 @@
     <description>Recent content on ghost in the computer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Oct 1988 00:01:00 +0500</lastBuildDate>
+    <lastBuildDate>Mon, 31 Dec 2018 00:01:00 +0500</lastBuildDate>
     
 	<atom:link href="https://szvsk.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>About me</title>
-      <link>https://szvsk.github.io/about/</link>
-      <pubDate>Thu, 27 Oct 1988 00:01:00 +0500</pubDate>
+      <title>Library</title>
+      <link>https://szvsk.github.io/library/</link>
+      <pubDate>Mon, 31 Dec 2018 00:01:00 +0500</pubDate>
       
-      <guid>https://szvsk.github.io/about/</guid>
-      <description>Hello, my name is Alexander Sizov and this is my website.
-It is some kind of blog and wiki, which I use to store non-sensitive data.
-I am not a native english speaker, so there will be many errors. Please, forgive me - and make a pull requests about them on github, if you can.</description>
+      <guid>https://szvsk.github.io/library/</guid>
+      <description>&lt;p&gt;List of books I&amp;rsquo;ve read.&lt;/p&gt;</description>
     </item>
     
   </channel>
